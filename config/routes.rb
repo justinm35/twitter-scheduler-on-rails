@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   root to: 'main#index'
-
+  #Method -> path ->  controllername # method
   get 'password', to: 'passwords#edit', as: :edit_password
   patch 'password', to: 'passwords#update'
 
@@ -15,7 +15,10 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   get "password/reset", to: 'password_resets#new'
-  post "password/reset", to: 'password_resets#new'
+  post "password/reset", to: 'password_resets#create'
+
+  get "password/reset/edit", to: 'password_resets#edit'
+  patch "password/reset/edit", to: 'password_resets#update'
 
   get 'about', to: 'about#index'
   # get 'about', to: 'about#index'
