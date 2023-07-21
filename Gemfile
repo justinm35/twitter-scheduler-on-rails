@@ -66,3 +66,10 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "omniauth-twitter", "~> 1.4"
+gem "omniauth-rails_csrf_protection", "~> 1.0"
+
+gem "twitter", "~> 8.0"
+
+gem "sidekiq", "~> 7.1"
